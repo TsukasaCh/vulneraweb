@@ -1,0 +1,3 @@
+Catatan internal:
+- Endpoint /calc dipakai untuk debugging perhitungan.
+- Input user harus disaring.

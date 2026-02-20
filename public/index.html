@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vulnera CTF Lab</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 32px auto;
+        padding: 0 16px;
+        line-height: 1.5;
+      }
+      form {
+        margin: 16px 0 24px;
+        padding: 16px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+      button {
+        margin-top: 12px;
+        padding: 10px 14px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        background: #1f6feb;
+        color: white;
+        cursor: pointer;
+      }
+      code {
+        background: #f6f8fa;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vulnera CTF Lab</h1>
+    <p>Target: temukan flag dengan format <code>REDLIMIT{...}</code>.</p>
+
+    <form action="/search" method="get">
+      <label for="q">Cari sesuatu</label>
+      <input id="q" name="q" type="text" placeholder="Ketik kata kunci" />
+      <button type="submit">Cari</button>
+      <p>Hasil akan ditampilkan apa adanya.</p>
+    </form>
+
+    <form action="/download" method="get">
+      <label for="file">Unduh file</label>
+      <input id="file" name="file" type="text" value="notes.txt" />
+      <button type="submit">Unduh</button>
+      <p>Gunakan file yang sudah dikenal.</p>
+    </form>
+
+    <form action="/calc" method="get">
+      <label for="expr">Kalkulator ekspresi</label>
+      <input id="expr" name="expr" type="text" placeholder="Contoh: (2+3)*4" />
+      <button type="submit">Hitung</button>
+      <p>Ekspresi akan diproses di server untuk debugging.</p>
+    </form>
+  </body>
+</html>
